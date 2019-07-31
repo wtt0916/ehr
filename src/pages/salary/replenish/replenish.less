@@ -1,0 +1,118 @@
+//弹框部分头部样式
+.head-wrap {
+  .head-top {
+    overflow: hidden;
+    padding: 0 100px 15px;
+    .right-info,
+    .header-img {
+      float: left;
+    }
+    .header-img {
+      margin-right: 20px;
+      img {
+        border-radius: 52px;
+      }
+    }
+    .right-info {
+      .user-name {
+        font-size: 24px;
+        font-family: PingFangSC-Semibold;
+        font-weight: 600;
+        color: #333;
+        display: inline-block;
+      }
+      .other-info {
+        color: @middle;
+        font-weight: 400;
+      }
+    }
+    .el-image {
+      @w:52px;
+      width: @w;
+      height: @w;
+      border-radius: @w;
+    }
+  }
+  .replenish-info,
+  .salary-describe,
+  .replenish-detail {
+    padding: 0 20px;
+    p {
+      margin-right: 30px;
+      display: inline-block;
+      font-size: 12px;
+    }
+  }
+  .replenish-detail {
+    font-size: 0;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    padding-top: 10px;
+    color: @dark;
+    span.title {
+      margin-right: 20px;
+    }
+  }
+  .replenish-info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .salary-describe {
+    padding: 20px;
+    width: 100%;
+    color: @middle;
+    background: @ff;
+    ul {
+      display: inline-block;
+      margin-left: 20px;
+      font-size: 0;
+    }
+    li {
+      @h: 20px;
+      width: 60px;
+      height: @h;
+      line-height: @h;
+      font-weight: 500;
+      font-size: 12px;
+      border-radius: 2px;
+      margin-right: 10px;
+      cursor: pointer;
+      display: inline-block;
+      border: 1px solid @light;
+      font-family: PingFangSC-Medium;
+    }
+    li.check {
+      background: @base;
+      color: @ff;
+    }
+  }
+  .head-body {
+    padding: 0;
+    width: 720px;
+    font-size: 12px;
+    .notes {
+      padding: 8px 20px;
+      p.note-title {
+        margin-right: 20px;
+        vertical-align: top;
+      }
+      p.note-content {
+        width: 610px;
+      }
+      p {
+        display: inline-block;
+      }
+      .salary-item {
+        margin-bottom: 10px;
+        .el-input {
+          width: 70px;
+          font-size: 12px;
+          margin-right: 3px;
+        }
+        p:last-child {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

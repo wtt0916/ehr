@@ -1,0 +1,252 @@
+//面包屑
+@import "./colors";
+.zy-bg-breadcrumb{
+  height: 88px;
+  background: @ff;
+  padding: 16px 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  .comm{
+    .el-breadcrumb{
+      font-size: 13px;
+    }
+    a{
+      color: #999;
+      font-weight: normal;
+    }
+    .el-breadcrumb__item:last-child .el-breadcrumb__inner a{
+      color: #666;
+      font-weight:500;
+    }
+  }
+  .menu-area{
+    overflow: hidden;
+    .comm{
+      padding-left: 14px;
+      float: left;
+    }
+    .btns{
+      float: right;
+      padding: 4px;
+      //margin-bottom: 21px;
+      button{
+        width:60px;
+        height:28px;
+        border-radius:2px;
+        color: #666;
+        border:1px solid #999;
+        font-size: 12px;
+        padding: 0;
+      }
+      .el-button--primary{
+        color: @ff;
+        background: @base;
+        border-color: @base;
+      }
+    }
+  }
+}
+
+.flex-col{
+  flex-direction: column;
+}
+.el-menu{
+  height: 100%;
+}
+td{font-size: 13px;}
+.el-table_2_column_13{text-align: justify;}
+//增减员清单 双向切换
+.el-tabs__nav-scroll{
+  height: 50px;
+  border-bottom: 1px solid #f4f4f4;
+  margin-left: 39px;
+
+  .el-tabs__item{
+    margin-top: 10px;
+  }
+  .el-tabs__nav-wrap{
+    border-bottom: 10px solid #f4f4f4;
+  }
+}
+
+// 操作---- addSub
+.el-button{
+  padding:7px 9px;
+}
+.addSubSearch .el-input__inner{
+  width:130px;
+}
+.el-form{float: left;}
+h6.set{
+  font-size: 14px;
+  margin: 0;
+  line-height: 1;
+  color: @base;
+  padding: 3px 0 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+//公共按钮
+.button{
+  // padding:7px 18px;
+  font-size: 12px;
+  border-radius:2px;
+  font-weight:500;
+}
+.default-button{
+  background: @ff;
+  color: @middle;
+  border: 1px solid @light;
+}
+.search-button{
+  width: 80px;
+  height: 36px;
+}
+.light-button{
+  color: @base;
+  border-color: @base;
+}
+.blue-button{
+  padding: 7px 25px;
+  font-size: 12px;
+  background: @base;
+  color: @ff;
+  box-shadow:0px 4px 10px 0px rgba(39,45,210,0.3);
+  border-radius:2px;
+}
+.green-button{
+  background: @success;
+  color: @ff !important;
+  border: 1px solid @success !important;
+}
+
+//公共弹框
+.zy-dialog-pub{
+  //白色框区域
+  .el-dialog{
+    box-shadow:2px 0px 16px 0px rgba(3,33,136,0.2);
+    border-radius:12px;
+  }
+  .el-dialog__header{
+    padding: 14px 45px;
+    box-shadow:2px 0px 16px 0px rgba(3,33,136,0.2);
+    .el-dialog__title{
+      color: #666;
+      font-size: 16px;
+      line-height: 1.4;
+      font-family:PingFangSC-Medium;
+      font-weight:500;
+    }
+  }
+  .el-dialog__body{
+    overflow: hidden;
+    font-size: 13px;
+    .el-input__inner{
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+
+  //文字描述
+  .word-explain{
+    text-align: center;
+  }
+  //内容区域
+  .head-body{
+    background: #fafafa;
+    border-radius:6px;
+    width: 640px;
+    height: 310px;
+    margin: 0 auto;
+    padding: 20px 40px;
+  }
+}
+//控制弹框区域宽度
+.zy-dialog-pub-medium{
+  .el-dialog{
+    width: 600px;
+    height: 300px;
+  }
+  .head-body{
+    width: 420px;
+    padding: 7px 40px;
+  }
+}
+.zy-dialog-pub-large{
+  .el-dialog{
+    width: 885px;
+    height: 520px;
+  }
+}
+.zy-dialog-pub-xlarge{
+  .el-dialog{
+    width: 1200px;
+    height: 600px;
+  }
+}
+
+//确认删除的弹框
+.el-message-box{
+  .el-message-box__btns{
+    button{
+      padding: 7px 25px;
+      font-size: 12px;
+      border-radius:2px;
+      font-weight:500;
+    }
+    button.el-button--primary{
+      background: @base;
+      color: @ff;
+      box-shadow:2px 0px 16px 0px rgba(3,33,136,0.2);
+    }
+  }
+}
+.overhidden{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.zy-main-wraps{
+  position: relative;
+  padding: 68px 20px;
+}
+.el-form-item.is-success .el-input__inner, .el-form-item.is-success .el-input__inner:focus, .el-form-item.is-success .el-textarea__inner, .el-form-item.is-success .el-textarea__inner:focus{
+  border-color: @base;
+}
+
+//有边框的输入框
+.zy-edit-pub{
+  background: #fff;
+  font-size: 0;
+  display: inline-block;
+  border:1px solid @light;
+  border-radius:2px;
+  .left-title{
+    //width: 85px;
+    font-size: 13px;
+    padding: 0 10px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    border-right: 1px solid @light;
+  }
+  .right-enter{
+    width: 132px;
+    font-size: 13px;
+    .el-input__inner{
+      border: 0;
+    }
+  }
+  .right-enter-height{
+    .el-input__inner{
+      height: 34px;
+    }
+  }
+}
+
+//弹框里带头像的个人信息
+//.zy-headinfo-wrap{
+//
+//}

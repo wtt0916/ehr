@@ -1,0 +1,287 @@
+@import "../../styles/colors";
+.salary{
+  //搜索区域
+  .search-area{
+    .el-input{
+      margin-right: 10px;
+    }
+    .search-input{
+      width: 160px;
+    }
+
+  }
+  .search-select{
+    @w:100px;
+    .el-input__inner{
+      width: @w;
+    }
+  }
+
+  /*表区域*/
+  .table-all-wrap{
+    background: @ff;
+  }
+  /deep/.el-table{
+    color: #333;
+    font-weight: 400;
+  }
+  /deep/.el-button--text{
+    color: @base;
+  }
+  /deep/.table-btn-gray{
+    color: @light;
+  }
+  /deep/.el-button+.el-button{
+    margin-left: 0;
+  }
+  /deep/.el-menu--horizontal{
+    z-index: 1;
+    margin: 0 30px;
+  }
+  /deep/.el-menu--horizontal>.el-menu-item{
+    @h:49px;
+    height: @h;
+    line-height: @h;
+    color: #666;
+    font-size:14px;
+    font-family:PingFangSC-Semibold;
+    font-weight:600;
+  }
+  /deep/.el-menu--horizontal>.el-menu-item.is-active{
+    border-bottom: 4px solid @base;
+    color: @base;
+  }
+
+  /deep/.el-table td{
+    padding: 5px 0;
+  }
+  /deep/.el-table th{
+    padding: 8px 0;
+  }
+  /deep/.el-table__header tr{
+    color: #333;
+  }
+  //选中方块
+  /deep/.el-checkbox__inner{
+    width:20px;
+    height:20px;
+    border-radius:4px;
+    border: 1px solid #999;
+  }
+  /deep/.el-checkbox__input.is-checked .el-checkbox__inner, /deep/.el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background: @base;
+    border: 1px solid @base;
+  }
+  /deep/.el-checkbox__input.is-indeterminate .el-checkbox__inner::before{
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    height: 10px;
+    width: 10px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  /deep/.el-checkbox__inner::after{
+    width: 6px;
+    height: 12px;
+    left: 5px;
+  }
+  //总选中按钮
+  /deep/.is-indeterminate{
+    .el-checkbox__inner{
+      background: @base;
+    }
+  }
+  //选中按钮
+  .is-checked{
+
+  }
+  /*分页区域*/
+  /deep/.el-pagination{
+    padding: 11px 5px;
+    background: @ff;
+    box-shadow:0px 1px 17px 0px rgba(54,78,159,0.29);
+    border-radius:0 0 4px 4px;
+    position: relative;
+    z-index: 11;
+    .el-pager{
+      li{
+        min-width: 24px;
+        height: 25px;
+        line-height: 25px;
+        font-weight: normal;
+        padding: 0;
+        color:rgba(0,0,0,0.65);;
+      }
+      li.active{
+        background: @base;
+        color: @ff;
+        border-radius: 4px;
+      }
+
+    }
+    .btn-prev,.btn-next{
+      min-width: 24px;
+      height: 25px;
+    }
+    .btn-prev{
+      padding-right: 0;
+    }
+    .btn-next{
+      padding-left: 0;
+    }
+  }
+  .el-pager .number active{
+    background: @base;
+  }
+  .el-pager li.active{
+    color: @base;
+  }
+  //.el-input--mini .el-input__inner{
+  //  height: 24px;
+  //  line-height: 24px;
+  //}
+  .el-pagination__editor.el-input .el-input__inner{
+    height: 24px;
+  }
+  .is-in-pagination .el-input__inner{
+    padding: 0 8px;
+    text-align: left;
+  }
+  //搜索条区域
+  .zy-search-pub{
+    position: relative;
+    background: @ff;
+    padding: 20px 30px;
+    box-shadow:2px 0px 16px 0px rgba(3,33,136,0.2);
+    border-radius:4px;
+    margin-bottom: 10px;
+    font-size: 0;
+    .search-item{
+      display: inline-block;
+      padding-right: 10px;
+      .el-select{
+        margin-right: 10px;
+      }
+      .el-input__inner{
+        height: 36px;
+        line-height: 36px;
+        border-radius:2px;
+        font-size: 12px;
+        color: #666;
+        border:1px solid @light;
+      }
+    }
+    .search-btns{
+      display: inline-block;
+      padding: 0 10px;
+      border-left: 1px solid #d8d8d8;
+      button{
+        padding: 10px 28px;
+        border:1px solid @light;
+        color: @middle;
+        border-radius:2px;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+      .light-btn{
+        color: @base;
+        border: 1px solid @base;
+      }
+    }
+    .btn-collapse{
+      display: inline-block;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      a{
+        color: #1660FD;
+        font-size: 12px;
+        font-family:PingFangSC-Medium;
+        font-weight:500;
+      }
+      .el-link.is-underline:hover:after{
+        border-bottom: 0;
+      }
+    }
+  }
+  .search-collapse{
+    padding: 2px 30px;
+    .search-item{
+      input.el-input__inner{
+        border: 0;
+      }
+    }
+    .search-btns{
+      button{
+        padding: 5px 28px;
+      }
+    }
+    .btn-collapse{
+      top:12px;
+    }
+  }
+  /deep/.el-switch.is-checked .el-switch__core{
+    background-color: @base;
+    border-color: @base;
+  }
+  //弹框里的搜索区域没有阴影
+  .head-top{
+    .zy-search-pub{
+      box-shadow: none;
+      padding: 0 20px;
+      .search-input,.el-input__inner{
+        width: 160px;
+      }
+      .dialog-search-select{
+        @h:80px;
+        width: @h;
+        .el-input__inner{
+          width: @h;
+        }
+      }
+      .search-input{
+        margin-right: 10px;
+      }
+    }
+  }
+  //弹框里头像用户信息区域
+  .dia-photo-info{
+    overflow: hidden;
+    padding: 0 100px 15px;
+    .right-info,.header-img{
+      float: left;
+    }
+    .header-img{
+      margin-right: 20px;
+      img{
+        border-radius: 52px;
+      }
+    }
+    .right-info{
+      .user-name{
+        font-size:24px;
+        font-family:PingFangSC-Semibold;
+        font-weight:600;
+        color: #333;
+        display: inline-block;
+      }
+      .other-info{
+        color: @middle;
+        font-weight: 400;
+      }
+    }
+    .el-image{
+      width: 52px; height: 52px;
+    }
+  }
+  //弹框里的确认取消按钮
+  .dialog-footer{
+    font-size: 0;
+    button:not(:first-child){
+      margin-left: 10px;
+    }
+  }
+}

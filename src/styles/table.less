@@ -1,0 +1,113 @@
+//table用到的公共样式
+//页面有table的话，单独引入此css
+@import "colors";
+.zy-table-pub{
+  /*表区域*/
+  /deep/.el-table{
+    color: #333;
+    font-weight: 400;
+  }
+  /deep/.el-button--text{
+    color: @base;
+  }
+  /deep/.el-button+.el-button{
+    margin-left: 0;
+  }
+
+  /deep/.el-table td{
+    padding: 5px 0;
+  }
+  /deep/.el-table th{
+    padding: 8px 0;
+  }
+  /deep/.el-table__header tr{
+    color: #333;
+    //box-shadow:2px 0px 16px 0px rgba(3,33,136,0.2);
+  }
+  //选中方块
+  .el-checkbox__inner{
+    width:20px;
+    height:20px;
+    border-radius:4px;
+    border: 1px solid #999;
+  }
+  .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background: @base;
+    border: 1px solid @base;
+  }
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner::before{
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    height: 10px;
+    width: 10px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  .el-checkbox__inner::after{
+    width: 6px;
+    height: 12px;
+    left: 5px;
+  }
+  //总选中按钮
+  .is-indeterminate{
+    .el-checkbox__inner{
+      background: @base;
+    }
+  }
+  //选中按钮
+  .is-checked{
+
+  }
+  /*分页区域*/
+  .el-pagination{
+    padding: 11px 5px;
+    .el-pager{
+      li{
+        min-width: 24px;
+        height: 25px;
+        line-height: 25px;
+        font-weight: normal;
+        padding: 0;
+        color:rgba(0,0,0,0.65);;
+      }
+      li.active{
+        background: @base;
+        color: @ff;
+        border-radius: 4px;
+      }
+
+    }
+    .btn-prev,.btn-next{
+      min-width: 24px;
+      height: 25px;
+    }
+    .btn-prev{
+      padding-right: 0;
+    }
+    .btn-next{
+      padding-left: 0;
+    }
+  }
+  .el-pager .number active{
+    background: @base;
+  }
+  .el-pager li.active{
+    color: @base;
+  }
+  .el-input--mini .el-input__inner{
+    height: 24px;
+    line-height: 24px;
+  }
+  .el-pagination__editor.el-input .el-input__inner{
+    height: 24px;
+  }
+  .is-in-pagination .el-input__inner{
+    padding: 0 8px;
+    text-align: left;
+  }
+}
+
+
